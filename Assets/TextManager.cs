@@ -6,6 +6,9 @@ public class TextManager : MonoBehaviour {
 
     public List<Text> texts;
 
+    private bool hasActiveText;
+    private Text activeText;
+
     private void Start()
     {
         AddText();
@@ -18,5 +21,37 @@ public class TextManager : MonoBehaviour {
         Debug.Log(text.text);
 
         texts.Add(text);
+    }
+
+    public void TypeLetter (char letter)
+    {
+        if (hasActiveText)
+        {
+            if (activeText.GetNextLetter() == letter)
+            {
+                activeText.TypeLetter();
+            }
+            // check if letter was next
+            // remove it from the word
+        } else
+        {
+            foreach(Text text in texts)
+            {
+                if(text.GetNextLetter() == letter)
+                {
+                    activeText = text;
+                    hasActiveText = true;
+                    text.TypeLetter();
+                    break;
+                }
+            }
+        }
+
+        if (hasActiveText && activeText.TextTyped())
+        {
+            hasActiveText = false;
+            texts.Remove(activeText);
+        }
+
     }
 }
