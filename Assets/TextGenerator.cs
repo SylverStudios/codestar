@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TextGenerator : MonoBehaviour {
 
-    private static string[] textList = { "git status", "git rebase --abort", "rm -rf /", "git add . && git commit -m \"Adds cats to loading page AND landing\"" };
+    private static string[] textList = { "git status", "git rebase --abort", "rm -rf /", "git add .", "git commit -m \"DO NOT MERGE\"" };
 
     public static string GetRandomText () {
 
