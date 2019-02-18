@@ -4,7 +4,7 @@ Hey guys! First Unity repo. Let me know what would be helpful here, shooting bli
 
 Did I include too many assets? too few? :shrug:
 
-## Breakdown
+## Overview
 
 Most of the logic lives in scripts rather than in the game lifecylce. Not sure it that's ideal or not, but it's almost exclusively based off of this [Demo by Breckey](https://www.youtube.com/watch?v=HvMrOoUeqO0).
 
@@ -12,7 +12,7 @@ There are only a few scripts, but it immediately becomes overwhelmingly confusin
 
 I'll try and do a clarity pass at some point soon, but I want to get it working a little more first.
 
-Basics:
+## Basics
 
 * Manager
   * In charge of requesting new prompts, tracking old ones, etc
@@ -25,4 +25,5 @@ Basics:
   * I'd like to build this into the adventure generator, so you will have a sequence of related tasks that can be interrupted
 * Input
   * Just that, it listens to the keys typed per frame
+
 
